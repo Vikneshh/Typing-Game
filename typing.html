@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="typing.css">
+</head>
+<body>
+    <button class="settings-btn" id="settings-btn">
+        <i class="bi bi-gear-fill"></i>
+    </button>
+
+    <div id="settings" class="settings">
+        <form id="settings-form">
+            <div>
+                <label for="difficulty">Difficulty Level :</label>
+                <select  id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>👩‍💻 Speed Typer 👨‍💻</h2>
+        <small>Type the following words</small>
+
+        <h1 id="word"></h1>
+        <input type="text" id="text" autocomplete="off" placeholder="Type the word here....">
+
+        <p class="time-container">
+            Time left: <span id="time">10s</span>
+        </p>
+
+        <p class="score-container">
+            Score: <span id="score">0</span>
+        </p>
+
+        <!-- the below div used after the game is finished and we update them with js -->
+        <div id="end-game-container" class="end-game-container">
+        </div>
+    </div>
+
+    <script src="typing.js"></script>
+</body>
+</html>
